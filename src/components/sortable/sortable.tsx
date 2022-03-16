@@ -30,8 +30,10 @@ export class Sortable {
     });
   }
 
-  componentShouldUpdate(newValue: any, _oldValue: any, propName: string) {
-    console.log("componentShouldUpdate", propName, newValue.map(e=> e.id));
+  componentShouldUpdate(newValue: any, oldValue: any, propName: string) {
+    console.log("componentShouldUpdate", propName);
+    console.log("newValue", newValue.map(e => e.id).join(", "));
+    console.log("oldValue", oldValue.map(e => e.id).join(", "));
   }
 
   // componentDidUpdate() { }
