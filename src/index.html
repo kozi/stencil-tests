@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>stencil tests</title>
+  <script type="module" src="build/stencil-tests.esm.js"></script>
+  <script nomodule src="build/stencil-tests.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px;
+      background: rgba(255, 255, 255, .8);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1>stencil tests</h1>
+
+    <h2>d-sortable</h2>
+    <d-sortable id="dSortable"></d-sortable>
+
+    <script>
+      const ds = document.getElementById("dSortable");
+      ds.entries = [{ id: "a", label: "A" }, { id: "b", label: "B" }, { id: "c", label: "C" }];
+    </script>
+
+
+  </div>
+
+</body>
+
+</html>

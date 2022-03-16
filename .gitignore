@@ -1,0 +1,9 @@
+.vscode/
+.stencil/
+node_modules/
+
+dist/
+loader/
+public/
+www/
+package-lock.json

@@ -1,0 +1,49 @@
+{
+  "name": "stencil-tests",
+  "version": "0.1.0",
+  "description": "stencil tests",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/jn-stencil/jn-stencil.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "build": "stencil build --docs-readme",
+    "build-docs": "stencil build --config stencil.config.docs.ts --docs-readme && npm run schema-form",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "postversion": "git push --follow-tags"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.14.2",
+    "sortablejs": "^1.14.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/puppeteer": "^5.4.5",
+    "@types/sortablejs": "^1.10.7",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "jest-junit": "^13.0.0",
+    "puppeteer": "^13.5.1"
+  }
+}

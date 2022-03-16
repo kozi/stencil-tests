@@ -1,2 +1,1 @@
-# stencil-tests
-stencil tests
+# stencil tests
