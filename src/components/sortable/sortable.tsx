@@ -6,7 +6,8 @@ export interface SortableEntry { id: string;  label: string; }
 @Component({
   tag: 'd-sortable',
   styleUrl: 'sortable.css',
-  shadow: true
+  shadow: false,
+  scoped: false
 })
 export class Sortable {
   private container: HTMLUListElement;
