@@ -5,36 +5,35 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { SortableEntry } from "./components/sortable/sortable";
 export namespace Components {
-    interface DSortable {
-        "entries": SortableEntry[];
+    interface DMarkdown {
+        "markdown": string;
     }
 }
 declare global {
-    interface HTMLDSortableElement extends Components.DSortable, HTMLStencilElement {
+    interface HTMLDMarkdownElement extends Components.DMarkdown, HTMLStencilElement {
     }
-    var HTMLDSortableElement: {
-        prototype: HTMLDSortableElement;
-        new (): HTMLDSortableElement;
+    var HTMLDMarkdownElement: {
+        prototype: HTMLDMarkdownElement;
+        new (): HTMLDMarkdownElement;
     };
     interface HTMLElementTagNameMap {
-        "d-sortable": HTMLDSortableElement;
+        "d-markdown": HTMLDMarkdownElement;
     }
 }
 declare namespace LocalJSX {
-    interface DSortable {
-        "entries"?: SortableEntry[];
+    interface DMarkdown {
+        "markdown"?: string;
     }
     interface IntrinsicElements {
-        "d-sortable": DSortable;
+        "d-markdown": DMarkdown;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "d-sortable": LocalJSX.DSortable & JSXBase.HTMLAttributes<HTMLDSortableElement>;
+            "d-markdown": LocalJSX.DMarkdown & JSXBase.HTMLAttributes<HTMLDMarkdownElement>;
         }
     }
 }

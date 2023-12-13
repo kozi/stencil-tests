@@ -1,49 +1,40 @@
 {
   "name": "stencil-tests",
-  "version": "0.1.0",
-  "description": "stencil tests",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/jn-stencil/jn-stencil.js",
+  "unpkg": "dist/stencil-tests/stencil-tests.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kozi/stencil-tests.git"
+  },
   "files": [
     "dist/",
     "loader/"
   ],
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=7.0.0"
-  },
   "scripts": {
-    "build": "stencil build --docs-readme",
-    "build-docs": "stencil build --config stencil.config.docs.ts --docs-readme && npm run schema-form",
+    "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
-    "postversion": "git push --follow-tags"
+    "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.14.2",
-    "sortablejs": "^1.14.0"
+    "@stencil/core": "^4.8.2",
+    "marked": "^11.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "@types/puppeteer": "^5.4.5",
-    "@types/sortablejs": "^1.10.7",
-    "husky": "^7.0.4",
-    "jest": "^27.5.1",
-    "jest-cli": "^27.5.1",
-    "jest-junit": "^13.0.0",
-    "puppeteer": "^13.5.1"
-  }
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.4",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "puppeteer": "21.6.0"
+  },
+  "license": "MIT"
 }
